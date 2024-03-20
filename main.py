@@ -1,11 +1,15 @@
 from room import Room
 from calculator import Calculator
 
-room_width = input("Type the room width: ")
-room_depth = input("Type the room depth: ")
+def main():
+    room_width = input("Type the room width: ")
+    room_depth = input("Type the room depth: ")
 
-room = Room(room_width, room_depth)
+    room = Room(room_width, room_depth)
 
-calculator = Calculator(room)
+    calculator = Calculator(room)
 
-print("The necessary amount of paint liters is: ", calculator.calculate_necessary_paint_liters())
+    print("The necessary amount of paint liters is: ", calculator.calculate_necessary_paint_liters())
+
+if __name__ == "__main__":
+    main()
