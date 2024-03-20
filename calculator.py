@@ -8,13 +8,13 @@ class Calculator:
     def __init__(self, room):
         self.__room = room
 
-    def __calculate_room_wall_area(self):
+    def __calculate_room_wall_area(self):        
         return 2 * (self.__room.width + self.__room.depth) * self.__room.heigth
         
     def __calculate_ceiling_area(self):
         return self.__room.width * self.__room.depth
 
-    def calculate_necessary_paint_liters(self):
+    def calculate_necessary_paint_liters(self):        
         self.__room_wall_area = self.__calculate_room_wall_area()
         self.__ceiling_area = self.__calculate_ceiling_area()
 
