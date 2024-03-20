@@ -14,7 +14,11 @@ class Room:
     
     @width.setter
     def width(self, value):
-        self.__width = value
+        try:            
+            self.__width = float(value)
+        except Exception:
+            print("Invalid input")
+            exit()
 
     @property
     def depth(self):
@@ -22,8 +26,11 @@ class Room:
     
     @depth.setter
     def depth(self, value):
-        self.__depth = value
-
+        try:
+            self.__depth = float(value)
+        except Exception:
+            print("Invalid input")
+            exit()
     @property  
     def heigth(self):
         return self.__heigth
